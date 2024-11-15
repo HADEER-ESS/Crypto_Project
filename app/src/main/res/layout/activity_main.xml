@@ -70,11 +70,22 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/shown_text"
+        android:id="@+id/shown_name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Hello World!"
         app:layout_constraintTop_toBottomOf="@id/btn_ly"
+        app:layout_constraintStart_toStartOf="@id/btn_ly"
+        android:layout_marginVertical="22dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/shown_password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Hello World!"
+        app:layout_constraintTop_toBottomOf="@id/shown_name_text"
         app:layout_constraintStart_toStartOf="@id/btn_ly"
         android:layout_marginVertical="22dp"
         android:textSize="18sp"

@@ -46,7 +46,8 @@ class MainActivity : AppCompatActivity() {
         coroutine.launch {
             val storeData = dataStore.data
             println("stored data looks like $storeData")
-            binding.shownText.text = storeData.first().toString()
+            binding.shownNameText.text = "Name : ${storeData.first().userName}"
+            binding.shownPasswordText.text = "Password : ${storeData.first().password}"
         }
     }
 
