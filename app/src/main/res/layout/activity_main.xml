@@ -8,14 +8,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/encrypt_text_field_ly"
+        android:id="@+id/encrypt_user_name_text_field_ly"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="26dp"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginVertical="12dp"
+        app:placeholderText="Name"
         >
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/encrypt_text_field_edt"
+            android:id="@+id/encrypt_name_text_field_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/encrypt_user_password_text_field_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/encrypt_user_name_text_field_ly"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginVertical="12dp"
+        app:placeholderText="Password"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/encrypt_password_text_field_edt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
@@ -25,27 +42,43 @@
         android:id="@+id/btn_ly"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/encrypt_text_field_ly"
+        app:layout_constraintTop_toBottomOf="@id/encrypt_user_password_text_field_ly"
+        android:layout_margin="24dp"
+        android:orientation="horizontal"
+        android:gravity="center"
         >
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/encrypt_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/add"
+            android:textColor="@color/white"
+            android:background="#000099"
+            android:textAllCaps="false"
             />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/decrypt_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/view"
+            android:textColor="@color/white"
+            android:background="#000099"
+            android:textAllCaps="false"
             />
     </LinearLayout>
 
     <TextView
+        android:id="@+id/shown_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:text="Hello World!"
+        app:layout_constraintTop_toBottomOf="@id/btn_ly"
+        app:layout_constraintStart_toStartOf="@id/btn_ly"
+        android:layout_marginVertical="22dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

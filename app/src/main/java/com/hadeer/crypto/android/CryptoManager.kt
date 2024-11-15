@@ -75,6 +75,15 @@ class CryptoManager {
 
         private const val TRANSFORMATION = "$ALGORITHM/$BLOCK_MODE/$PADDING"
 
+        /*{
+        Block Mode:
+        describes how the different blocks of a multi-block plaintext
+        should be encrypted and decrypted
+        Padding:
+        some modes (such as ECB and CBC) require that the final block to be padded
+        before encryption
+        }*/
+
     }
 
     // 5
